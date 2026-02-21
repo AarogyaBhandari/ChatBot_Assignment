@@ -32,7 +32,7 @@ splitter = RecursiveCharacterTextSplitter(
 
 print("Reading articles.jsonl and generating embeddings:")
 
-#INGEST DATA AB 
+#INGEST DATA 
 with open("articles.jsonl", "r", encoding="utf-8") as f:
     for article_index, line in enumerate(f):
 
@@ -67,7 +67,7 @@ with open("articles.jsonl", "r", encoding="utf-8") as f:
                 }]
             )
 
-        #AB mark article as processed
+        #mark article as processed
         with open("counter.txt", "w") as f_out:
             f_out.write(str(article_index + 1))
 
@@ -131,3 +131,4 @@ while True:
     print("\nBot Answer:", answer, "\n")
     
     
+
